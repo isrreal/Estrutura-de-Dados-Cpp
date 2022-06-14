@@ -10,7 +10,7 @@
 int buscaBinariaIterativa(std::vector<int>& vetor, int numeroRequerido) {
     int inicio = 0;
     int fim = vetor.size() - 1;
-    while (inicio < fim) {
+    while (inicio <= fim) {
         int meio = (inicio + fim) / 2;
         if (vetor[meio] == numeroRequerido)
             return meio;
@@ -21,7 +21,7 @@ int buscaBinariaIterativa(std::vector<int>& vetor, int numeroRequerido) {
         // senão, está na metade esquerda 
         else
             // limita o fim ao meio
-            fim = meio;
+            fim = meio - 1;
     }
     return -1;
 }

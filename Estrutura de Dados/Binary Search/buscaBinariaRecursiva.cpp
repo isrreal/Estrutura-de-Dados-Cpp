@@ -1,6 +1,12 @@
 #include <iostream>
 #include <vector>
 // obs: os elementos do vetor devem estar obrigatoriamente ordenados
+
+/*
+    * Busca iterativamente o item dentro do vetor vector. A cada iteração
+    * reduz o espaço de busca pela metade sem fazer chamadas recursivas.
+    * Ao encontrar o item retorna seu índice. Caso contrário retorna -1
+*/
 int buscaBinariaRecursiva(std::vector<int>& vetor, int inicio,
                             int fim, int numeroRequerido) {
     int meio = (inicio + fim) / 2;
