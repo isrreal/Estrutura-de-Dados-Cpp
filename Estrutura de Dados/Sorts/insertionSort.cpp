@@ -5,7 +5,7 @@
 
 void insertionSort(int* array, size_t tamanho) {
     // percorre todo o vetor
-    for (size_t i = 0; i < tamanho; i++)
+    for (size_t i = 0; i < tamanho - 1; i++)
     // percorre na posicao seguinte em relação a "i" (por isso o "j = i + 1")
     // e decrementa para comparar com os elementos anteriores
         for (size_t j = i + 1; j > 0; --j)
@@ -22,7 +22,7 @@ void printar(int* array, size_t tamanho) {
         std::cout << array[i] << " ";
 }
 int main() {
-    int array[] = {1, 23, 534, 2, 5, 9, -90};
+    int array[] = {1, 23, 534, 2, 5, 9, 2, -90};
     size_t tamanho = sizeof(array)/ sizeof(array[0]);
     insertionSort(array, tamanho);
     printar(array, tamanho);
